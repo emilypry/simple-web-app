@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>My App</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <center>
+        <h1>Delete friends</h1>
+        <form method="post">
+            <ul style="list-style-type:none">
+                <li th:each="friend : ${friends}">
+                    <input type="checkbox" th:text="${friend}" th:name="friend" th:value="${friends.indexOf(friend)}">
+                </li>
+            </ul>
+            <input type="submit" value="Delete"/>
+        </form>
+    </center>
+</body>
+</html>
